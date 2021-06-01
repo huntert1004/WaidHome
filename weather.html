@@ -1,0 +1,26 @@
+<link rel="stylesheet" type="text/css" href="css/weather_page/weather.css" media="screen" />
+
+<!-- <div id="bg-before"></div> -->
+
+<body>
+    <div id="img"></div>
+    <h2 id="temp1"></h2>
+
+</body>
+
+
+
+
+</div>
+<script>
+    var city = sessionStorage.getItem("city");
+    var conditionimg = sessionStorage.getItem("conditionimg");
+    var temp = sessionStorage.getItem("temp");
+    temp += " degrees in "
+    temp = temp + " " + city
+
+    document.getElementById("temp1").innerHTML = temp
+    document.getElementById("location1").innerHTML = city;
+    document.getElementById("img").style.background = "url('" + "https:" + conditionimg + "')";
+    document.getElementById("img").style.background = "url('" + "https:" + conditionimg + "')";
+</script>

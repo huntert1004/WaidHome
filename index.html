@@ -1,0 +1,157 @@
+<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+<link rel="import" href="SphereDisplay/index.html">
+<html>
+
+
+<head>
+    <a id="opener"></a>
+
+
+</head>
+<video loop muted autoplay id="myVideo">
+    <source id="vid" type="video/mp4">
+</video>
+<!-- <video autoplay id="myVideo1">
+    <source id="vid" type="video/mp4">
+</video> -->
+
+
+<body onload="reload()">
+
+    <div id="player"></div>
+
+    <audio id="myAudio"></audio>
+    <audio id="bedtime"></audio>
+    <canvas id="bg"></canvas>
+    <canvas id="logo"></canvas>
+
+    <div class='box-outer'>
+        <div class='main_box'>
+            <div class='bar top'></div>
+            <div class='bar right delay'></div>
+            <div class='bar bottom delay'></div>
+            <div class='bar left'></div>
+        </div>
+    </div>
+
+    <iframe id="listen" scrolling="no" src="listen.html"></iframe>
+    <iframe id="yt" width="500" height="300" frameborder="0" allow='autoplay' allowfullscreen></iframe>
+    <!-- <div id="my-youtube-player" data-youtube-videoid=""></div> -->
+    <div id="tint"></div>
+    <!-- <button id="micstart" onclick="startlistening()">Start the magic</button> -->
+    <iframe id="data1"></iframe>
+    <iframe id="movie" scrolling="no"></iframe>
+    <iframe id="data2" scrolling="no"></iframe>
+    <iframe id="music" scrolling="no"></iframe>
+    <iframe id="player" scrolling="no"></iframe>
+    <iframe id="data3" scrolling="no" width="100%" height="100%"></iframe>
+    <iframe id="text" src="text.html"></iframe>
+
+</body>
+<!-- <button onclick="hello()">hello</button> -->
+
+
+</html>
+
+<!-- <iframe src="https://www.yt-download.org/api/button/mp3/FnCdOQsX5kc" width="100%" height="100px" scrolling="no" style="border:none;"></iframe> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.14/iframeResizer.min.js"></script>
+<script>
+    iFrameResize({}, '#yt');
+</script>
+<!-- <script src="SphereDisplay/js/speech.js"></script> -->
+<script>
+    localStorage.j = 0;
+    vidcounter = localStorage.j
+    var w;
+    parent.window.waid = parent.window.waid || {};
+    // setTimeout(function() {
+    //     hello()
+    // }, 3000);
+    parent.window.waid.hrllo = document.getElementById('opener'), w;
+
+    // if (!w || w.closed) {
+    //     var novoForm = window.open("SphereDisplay/index.html");
+    // lol = ["https://jarvisai.netlify.app/naturebg2.mp4", "https://jarvisai.netlify.app/naturebg2.mp4"];
+    // random = Math.floor(Math.random() * 2);
+
+    // vid = document.getElementById("myVideo")
+    // myVideo.loop = true;
+    // isSupp = vid.canPlayType("video/mp4");
+    // vid.src = lol[random]
+    // vid.load()
+    // vid.play()
+    // vid.onended = function() {
+
+    // };
+    //     // novoForm.onload = function() {
+
+    //     //     var w = novoForm.script;
+    //     //     var h = novoForm.innerHeight;
+    //     //     novoForm.document.getElementById("monitor").innerHTML = 'Janela: ' + w + ' x ' + h;
+
+    // }
+</script>
+<script src="js/clapmodel.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands@0.4.0/dist/speech-commands.min.js"></script>
+<script src="js/plugins/revealanwser.js"></script>
+<script src="js/plugins/textanimate.js"></script>
+<script src="js/listen.js"></script>
+<script src="js/stockpage.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=MoMm0Iag"></script>
+<script src="js/speech-input.js"></script>
+<script src="js/script.js"></script>
+<script src="js/lib/core.js"></script>
+<script src="js/plugins/youtube.js"></script>
+<script src="js/plugins/translate.js"></script>
+<script src="js/plugins/ticketmaster.js"></script>
+<script src="js/plugins/bussinessinfo.js"></script>
+<script src="js/plugins/bluetooth.js"></script>
+<script src="js/plugins/basketball.js"></script>
+<script src="js/plugins/famouspeople.js"></script>
+<script src="js/plugins/searchsocial.js"></script>
+<script src="js/plugins/movies.js"></script>
+<script src="js/plugins/news.js"></script>
+<script src="js/plugins/suggest.js"></script>
+<script src="js/plugins/moviesnear.js"></script>
+<script src="js/plugins/soccer.js"></script>
+<script src="http://www.youtube.com/player_api"></script>
+<script src="js/plugins/odds.js"></script>
+<script src="js/plugins/dictionary.js"></script>
+<script src="js/plugins/tv.js"></script>
+<script src="js/plugins/getwiki.js"></script>
+<script src="js/plugins/music.js"></script>
+<script src="js/plugins/stock.js"></script>
+<script src="js/plugins/calldata.js"></script>
+<script src="js/plugins/convert.js"></script>
+<script src="js/plugins/convo.js"></script>
+<script src="js/plugins/speech.js"></script>
+<script src="js/plugins/timer.js"></script>
+<script src="js/plugins/gpt-2.js"></script>
+<script src="js/plugins/food.js"></script>
+<script src="js/plugins/traffic.js"></script>
+<script src="js/plugins/mute.js"></script>
+<script src="js/plugins/bedtime.js"></script>
+<script src="js/plugins/holiday.js"></script>
+<script src="js/plugins/donate.js"></script>
+<script src="js/plugins/workmode.js"></script>
+<script src="js/plugins/math.js"></script>
+<script src="js/plugins/time.js"></script>
+<script src="js/plugins/randomfoodimg.js"></script>
+<script src="js/plugins/joke.js"></script>
+<script src="js/plugins/trivia.js"></script>
+<script src="js/plugins/eastereggs.js"></script>
+<script src="js/plugins/weather.js"></script>
+<script src="js/plugins/bored.js"></script>
+<script src="js/plugins/gpt-3.js"></script>
+<script src="js/plugins/advice.js"></script>
+<script src="js/plugins/openservice.js"></script>
+<script src="js/plugins/help.js"></script>
+<script src="js/plugins/sppech_to_text.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<!-- <script src="js/test.js"></script> -->
+<script src="js/settext.js"></script>
+<script src="js/plugins/countryinfo.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>

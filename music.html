@@ -1,0 +1,74 @@
+<script src="js/music_player_page/audio.js"></script>
+<link rel="stylesheet" type="text/css" href="css/music_player_page/audio.css" media="screen" />
+<div id="bg-before"></div>
+<div id="bg"></div>
+<audio id="myAudio"></audio>
+
+
+<body onload="onload()">
+    <main>
+        <div id="albumCover"></div>
+        <div id="progress">
+            <div id="progress-bar"></div>
+        </div>
+
+        <div id="title">
+            <div id="info"></div>
+        </div>
+        <div class="row">
+            <div class="column" id="skip-left" style="background-image:url('https://jarvisai.netlify.app/play-left.png');">
+
+            </div>
+            <div class="column" onclick="pause_play()" id="pause/play" style="background-image:url('https://jarvisai.netlify.app/pause.png');">
+
+            </div>
+            <div class="column" id="skip-right" style="background-image:url('https://jarvisai.netlify.app/play-right.png');">
+
+            </div>
+        </div>
+        </div>
+    </main>
+</body>
+<script>
+    function pause_play() {
+        var audio = document.getElementById('myAudio');
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    }
+
+    function onload() {
+        var bedlink = sessionStorage.getItem("bedlink");
+        var bedinfo = sessionStorage.getItem("bedinfo");
+        var bedimglink = sessionStorage.getItem("bedimglink");
+        document.getElementById('info').innerHTML = bedinfo
+        document.body.children[3].children[0].style.background = "url('" + bedimglink + "')";
+        document.body.children[0].style.background = "url('" + bedimglink + "')";
+
+        var audio = parent.document.getElementById('bedtime');
+
+        audio.src = bedlink
+        audio.load();
+        setTimeout(function() {
+            audio.play()
+            // var childiFrame = parent.document.getElementById("music");
+            // var doc = childiFrame.contentDocument ||
+            //     childiFrame.contentWindow.document;
+
+        }, 5000);
+
+
+
+    }
+
+    function close() {
+        window.close()
+        sessionStorage.clear()
+    }
+    var lol = document.getElementById('myAudio');
+    lol.onended = function() {
+        parent.document.getElementById("music").src = ""
+    };
+</script>

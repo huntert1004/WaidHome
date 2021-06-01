@@ -1,0 +1,906 @@
+{
+    "convert": {
+        "volume": [{
+                "conversionlabel": "milliliter to liter",
+                "toconversionlabel": "liter",
+                "conversion": ".001"
+            },
+
+            {
+                "conversionlabel": "centiliter to liter",
+                "toconversionlabel": "liter",
+                "conversion": ".01"
+            },
+            {
+                "conversionlabel": "deciliter to liter",
+                "conversion": ".1"
+            },
+            {
+                "conversionlabel": "decaliter to liter",
+                "conversion": "10"
+            },
+            {
+                "conversionlabel": "hectoliter to liter",
+
+                "conversion": "100"
+            },
+            {
+                "conversionlabel": "cubic meter to liter",
+
+                "conversion": "1000"
+            },
+
+            {
+                "conversionlabel": "cubic inch to liter",
+                "conversion": ".01639"
+            },
+            {
+                "conversionlabel": "gallon to liter",
+                "conversion": "3.785"
+            },
+            {
+                "conversionlabel": "cubic foot to liter",
+                "conversion": "28.316"
+            },
+            {
+                "conversionlabel": "pint to liter",
+                "conversion": "0.473176473"
+            },
+            {
+                "conversionlabel": "quart to liter",
+                "conversion": "0.946352946"
+            },
+            {
+                "conversionlabel": "barrel to liter",
+                "conversion": "119.240471196"
+            },
+
+            {
+                "conversionlabel": "milliliter to cubic meter",
+                "conversion": "0.000001"
+            },
+            {
+                "conversionlabel": "liter to cubic meter",
+                "conversion": "0.001"
+            },
+            {
+                "conversionlabel": "cubic inch to cubic meter",
+                "conversion": "0.000016387064"
+            },
+            {
+                "conversionlabel": "cubic foot to cubic meter",
+                "conversion": "0.028316846592"
+            },
+            {
+                "conversionlabel": "pint to cubic meter",
+                "toconversionlabel": "",
+                "conversion": "0.000473176473"
+            },
+            {
+                "conversionlabel": "quart to cubic meter",
+                "conversion": "0.000946352946"
+            },
+            {
+                "conversionlabel": "gallon to cubic meter",
+                "conversion": "0.003785411784"
+            },
+            {
+                "conversionlabel": "barrel to cubic meter",
+                "conversion": "0.119240471196"
+            },
+
+            {
+                "conversionlabel": "milliliter to cubic inch",
+                "conversion": "0.061023744094732"
+            },
+            {
+                "conversionlabel": "liter to cubic inch",
+                "conversion": "61.023744094732"
+            },
+            {
+                "conversionlabel": "cubic meter to cubic inch",
+                "conversion": "61023.744094732"
+            },
+            {
+                "conversionlabel": "cubic foot to cubic inch",
+                "conversion": "1728"
+            },
+            {
+                "conversionlabel": "pint to cubic inch",
+                "conversion": "28.875"
+            },
+            {
+                "conversionlabel": "quart to cubic inch",
+                "conversion": "57.75"
+            },
+            {
+                "conversionlabel": "gallon to cubic inch",
+                "conversion": "231"
+            },
+            {
+                "conversionlabel": "barrel to cubic inch",
+                "conversion": "7276.5"
+            },
+
+            {
+                "conversionlabel": "milliliter to cubic foot",
+                "conversion": "0.000035314666721489"
+            },
+            {
+                "conversionlabel": "liter to cubic foot",
+                "conversion": "0.035314666721489"
+            },
+            {
+                "conversionlabel": "cubic meter to cubic foot",
+                "conversion": "35.314666721489"
+            },
+            {
+                "conversionlabel": "cubic inch to cubic foot",
+                "conversion": "0.0005787037037037"
+            },
+            {
+                "conversionlabel": "pint to cubic foot",
+                "conversion": "0.016710069444444"
+            },
+            {
+                "conversionlabel": "quart to cubic foot",
+                "conversion": "0.033420138888889"
+            },
+            {
+                "conversionlabel": "gallon to cubic foot",
+                "conversion": "0.13368055555556"
+            },
+            {
+                "conversionlabel": "barrel to cubic foot",
+                "conversion": "4.2109375"
+            },
+
+            {
+                "conversionlabel": "milliliter to pint",
+                "conversion": "0.0021133764188652"
+            },
+            {
+                "conversionlabel": "liter to pint",
+                "conversion": "2.1133764188652"
+            },
+            {
+                "conversionlabel": "cubic inch to pint",
+                "conversion": "0.034632034632035"
+            },
+            {
+                "conversionlabel": "cubic foot to pint",
+                "conversion": "59.844155844156"
+            },
+            {
+                "conversionlabel": "cubic meter to pint",
+                "conversion": "2113.3764188652"
+            },
+            {
+                "conversionlabel": "quart to pint",
+                "conversion": "2"
+            },
+            {
+                "conversionlabel": "gallon to pint",
+                "conversion": "8"
+            },
+            {
+                "conversionlabel": "barrel to pint",
+                "conversion": "252"
+            },
+
+            {
+                "conversionlabel": "milliliter to quart",
+                "conversion": "0.0010566882094326"
+            },
+            {
+                "conversionlabel": "liter to quart",
+                "conversion": "1.0566882094326"
+            },
+            {
+                "conversionlabel": "cubic meter to quart",
+                "conversion": "1056.6882094326"
+            },
+            {
+                "conversionlabel": "cubic inch to quart",
+                "conversion": "0.017316017316017"
+            },
+            {
+                "conversionlabel": "cubic foot to quart",
+                "conversion": "29.922077922078"
+            },
+            {
+                "conversionlabel": "pint to quart",
+                "conversion": "0.5"
+            },
+            {
+                "conversionlabel": "gallon to quart",
+                "conversion": "4"
+            },
+            {
+                "conversionlabel": "barrel to quart",
+                "conversion": "126"
+            },
+
+            {
+                "conversionlabel": "milliliter to gallon",
+                "conversion": "0.00026417205235815"
+            },
+            {
+                "conversionlabel": "liter to gallon",
+                "conversion": "0.26417205235815"
+            },
+            {
+                "conversionlabel": "cubic meter to gallon",
+                "conversion": "264.17205235815"
+            },
+            {
+                "conversionlabel": "cubic inch to gallon",
+                "conversion": "0.0043290043290043"
+            },
+            {
+                "conversionlabel": "cubic foot to gallon",
+                "conversion": "7.4805194805195"
+            },
+            {
+                "conversionlabel": "pint to gallon",
+                "conversion": "0.125"
+            },
+            {
+                "conversionlabel": "quart to gallon",
+                "conversion": "0.25"
+            },
+            {
+                "conversionlabel": "barrel to gallon",
+                "conversion": "31.5"
+            },
+
+            {
+                "conversionlabel": "milliliter to barrel",
+                "conversion": "0.0000083864143605761"
+            },
+            {
+                "conversionlabel": "liter to barrel",
+                "conversion": "0.0083864143605761"
+            },
+            {
+                "conversionlabel": "cubic meter to barrel",
+                "conversion": "8.3864143605761"
+            },
+            {
+                "conversionlabel": "cubic inch to barrel",
+                "conversion": "0.00013742870885728"
+            },
+            {
+                "conversionlabel": "cubic foot to barrel",
+                "conversion": "0.23747680890538"
+            },
+            {
+                "conversionlabel": "pint to barrel",
+                "conversion": "0.003968253968254"
+            },
+            {
+                "conversionlabel": "quart to barrel",
+                "conversion": "0.0079365079365079"
+            },
+            {
+                "conversionlabel": "gallon to barrel",
+                "conversion": "0.031746031746032"
+            },
+
+
+            {
+                "conversionlabel": "liter to milliliter",
+                "conversion": "1000"
+            }, {
+                "conversionlabel": "cubic inch to milliliter",
+                "conversion": "16.387064"
+            },
+            {
+                "conversionlabel": "pint to milliliter",
+                "conversion": "473.176473"
+            },
+            {
+                "conversionlabel": "quart to milliliter",
+                "conversion": "946.352946"
+            },
+            {
+                "conversionlabel": "barrel to milliliter",
+                "conversion": "119240.471196"
+            },
+            {
+                "conversionlabel": "gallon to milliliter",
+                "conversion": "3785.411784"
+            }
+        ],
+        "length": [{
+                "conversionlabel": "centimeter to millimeter",
+                "conversion": "10"
+            },
+            {
+                "conversionlabel": "meter to millimeter",
+                "conversion": "1000"
+            },
+            {
+                "conversionlabel": "kilometer to millimeter",
+                "conversion": "1000000"
+            },
+            {
+                "conversionlabel": "inch to millimeter",
+                "conversion": "25.4"
+            },
+            {
+                "conversionlabel": "foot to millimeter",
+                "conversion": "304.8"
+            },
+            {
+                "conversionlabel": "yard to millimeter",
+                "conversion": "914.4"
+            },
+            {
+                "conversionlabel": "mile to millimeter",
+                "conversion": "1609344"
+            },
+            {
+                "conversionlabel": "nautrical mile to millimeter",
+                "conversion": "1852000"
+            },
+
+            {
+                "conversionlabel": "millimeter to centimeter",
+                "conversion": "0.1"
+            },
+            {
+                "conversionlabel": "meter to centimeter",
+                "conversion": "100"
+            },
+            {
+                "conversionlabel": "kilometer to centimeter",
+                "conversion": "100000"
+            },
+            {
+                "conversionlabel": "inch to centimeter",
+                "conversion": "2.54"
+            },
+            {
+                "conversionlabel": "foot to centimeter",
+                "conversion": "30.48"
+            },
+            {
+                "conversionlabel": "mile to centimeter",
+                "conversion": "160934.4"
+            },
+            {
+                "conversionlabel": "yard to centimeter",
+                "conversion": "91.44"
+            },
+            {
+                "conversionlabel": "nautrical mile to centimeter",
+                "conversion": "185200"
+            },
+
+            {
+                "conversionlabel": "millimeter to meter",
+                "conversion": ".01"
+            },
+            {
+                "conversionlabel": "centimeter to meter",
+                "conversion": "0.01"
+            },
+            {
+                "conversionlabel": "kilometer to meter",
+                "conversion": "1000"
+            },
+            {
+                "conversionlabel": "inch to meter",
+                "conversion": "0.0254"
+            },
+            {
+                "conversionlabel": "foot to meter",
+                "conversion": "0.3048"
+            },
+            {
+                "conversionlabel": "yard to meter",
+                "conversion": "0.9144"
+            },
+            {
+                "conversionlabel": "mile to meter",
+                "conversion": "1609.344"
+            },
+            {
+                "conversionlabel": "nautical mile to meter",
+                "conversion": "1852"
+            },
+
+            {
+                "conversionlabel": "millimeter to kilometer",
+                "conversion": "0.000001"
+            },
+            {
+                "conversionlabel": "centimeter to kilometer",
+                "conversion": "0.00001"
+            },
+            {
+                "conversionlabel": "meter to kilometer",
+                "conversion": "0.001"
+            },
+            {
+                "conversionlabel": "inch to kilometer",
+                "conversion": "0.0000254"
+            },
+            {
+                "conversionlabel": "foot to kilometer",
+                "conversion": "0.0003048"
+            },
+            {
+                "conversionlabel": "yard to kilometer",
+                "conversion": "0.0009144"
+            },
+            {
+                "conversionlabel": "mile to kilometer",
+                "conversion": "1.609344"
+            },
+            {
+                "conversionlabel": "nautical mile to kilometer",
+                "conversion": "1.852"
+            },
+
+            {
+                "conversionlabel": "millimeter to inch",
+                "conversion": "0.039370078740157"
+            },
+            {
+                "conversionlabel": "centimeter to inch",
+                "conversion": "0.39370078740157"
+            },
+            {
+                "conversionlabel": "meter to inch",
+                "conversion": "39.370078740157"
+            },
+            {
+                "conversionlabel": "kilometer to inch",
+                "conversion": "39370.078740157"
+            },
+            {
+                "conversionlabel": "foot to inch",
+                "conversion": "12"
+            },
+            {
+                "conversionlabel": "yard to inch",
+                "conversion": "36"
+            },
+            {
+                "conversionlabel": "mile to inch",
+                "conversion": "63360"
+            },
+            {
+                "conversionlabel": "nautical mile to inch",
+                "conversion": "72913.385826772"
+            },
+            {
+                "conversionlabel": "nautical mile to inch",
+                "conversion": "1.852"
+            },
+
+            {
+                "conversionlabel": "millimeter to foot",
+                "conversion": "0.0032808398950131"
+            },
+            {
+                "conversionlabel": "centimeter to foot",
+                "conversion": "0.032808398950131"
+            },
+            {
+                "conversionlabel": "meter to foot",
+                "conversion": "3.2808398950131"
+            },
+            {
+                "conversionlabel": "kilometer to foot",
+                "conversion": "3280.8398950131"
+            },
+            {
+                "conversionlabel": "inch to foot",
+                "conversion": "0.083333333333333"
+            },
+            {
+                "conversionlabel": "yard to foot",
+                "conversion": "3"
+            },
+            {
+                "conversionlabel": "mile to foot",
+                "conversion": "5280"
+            },
+            {
+                "conversionlabel": "nautical mile to foot",
+                "conversion": "6076.1154855643"
+            },
+
+            {
+                "conversionlabel": "millimeter to yard",
+                "conversion": "0.0010936132983377"
+            },
+            {
+                "conversionlabel": "centimeter to yard",
+                "conversion": "0.010936132983377"
+            },
+            {
+                "conversionlabel": "kilometer to yard",
+                "conversion": "1093.6132983377"
+            },
+            {
+                "conversionlabel": "inch to yard",
+                "conversion": "0.027777777777778"
+            },
+            {
+                "conversionlabel": "foot to yard",
+                "conversion": "0.33333333333333"
+            },
+            {
+                "conversionlabel": "mile to yard",
+                "conversion": "1760"
+            },
+            {
+                "conversionlabel": "nautical mile to yard",
+                "conversion": "2025.3718285214"
+            },
+            {
+                "conversionlabel": "meter to yard",
+                "conversion": "1.0936132983377"
+            },
+
+            {
+                "conversionlabel": "millimeter to mile",
+                "conversion": "0.00000062137119223733"
+            },
+            {
+                "conversionlabel": "centimeter to mile",
+                "conversion": "0.0000062137119223733"
+            },
+            {
+                "conversionlabel": "meter to mile",
+                "conversion": "0.00062137119223733"
+            },
+            {
+                "conversionlabel": "kelometer to mile",
+                "conversion": "0.62137119223733"
+            },
+            {
+                "conversionlabel": "inch to mile",
+                "conversion": "0.000015782828282828"
+            },
+            {
+                "conversionlabel": "foot to mile",
+                "conversion": "0.00018939393939394"
+            },
+            {
+                "conversionlabel": "yard to mile",
+                "conversion": "0.00056818181818182"
+            },
+            {
+                "conversionlabel": "nautical mile to mile",
+                "conversion": "0.00000062137119223733"
+            },
+
+            {
+                "conversionlabel": "millimeter to nautical mile",
+                "conversion": "0.00000053995680345572"
+            },
+            {
+                "conversionlabel": "centimeter to nautical mile",
+                "conversion": "0.0000053995680345572"
+            },
+            {
+                "conversionlabel": "meter to nautical mile",
+                "conversion": "0.00053995680345572"
+            },
+            {
+                "conversionlabel": "kilometer to nautical mile",
+                "conversion": "0.53995680345572"
+            },
+            {
+                "conversionlabel": "inch to nautical mile",
+                "conversion": "0.000013714902807775"
+            },
+            {
+                "conversionlabel": "foot to nautical mile",
+                "conversion": "0.0001645788336933"
+            },
+            {
+                "conversionlabel": "yard to nautical mile",
+                "conversion": "0.00049373650107991"
+            },
+            {
+                "conversionlabel": "mile to nautical mile",
+                "conversion": "0.86897624190065"
+            }
+        ],
+        "weight": [{
+                "conversionlabel": "kilogram to gram",
+                "conversion": "1000"
+            },
+            {
+                "conversionlabel": "pound to gram",
+                "conversion": "453.59237"
+            },
+            {
+                "conversionlabel": "grain to gram",
+                "conversion": "0.06479891"
+            },
+            {
+                "conversionlabel": "ounce to gram",
+                "conversion": "28.349523125"
+            },
+            {
+                "conversionlabel": "carat to gram",
+                "conversion": "0.2"
+            },
+            {
+                "conversionlabel": "ton to gram",
+                "conversion": "907184.74"
+            },
+            {
+                "conversionlabel": "long ton to gram",
+                "conversion": "1016046.9088"
+            },
+            {
+                "conversionlabel": "tonne to gram",
+                "conversion": "1000000"
+            },
+
+            {
+                "conversionlabel": "gram to kilogram",
+                "conversion": "0.001"
+            },
+            {
+                "conversionlabel": "pound to kilogram",
+                "conversion": "0.45359237"
+            },
+            {
+                "conversionlabel": "ounce to kilogram",
+                "conversion": "0.028349523125"
+            },
+            {
+                "conversionlabel": "carat to kilogram",
+                "conversion": "0.0002"
+            },
+            {
+                "conversionlabel": "ton to kilogram",
+                "conversion": "907.18474"
+            },
+            {
+                "conversionlabel": "long ton to kilogram",
+                "conversion": "1016.0469088"
+            },
+            {
+                "conversionlabel": "tonne to kilogram",
+                "conversion": "1000"
+            },
+            {
+                "conversionlabel": "grain to kilogram",
+                "conversion": "0.00006479891"
+            },
+
+            {
+                "conversionlabel": "gram to pound",
+                "conversion": "0.0022046226218488"
+            },
+            {
+                "conversionlabel": "kilogram to pound",
+                "conversion": "2.2046226218488"
+            },
+            {
+                "conversionlabel": "ounce to pound",
+                "conversion": "0.0625"
+            },
+            {
+                "conversionlabel": "carat to pound",
+                "conversion": "0.00044092452436976"
+            },
+            {
+                "conversionlabel": "ton to pound",
+                "conversion": "2000"
+            },
+            {
+                "conversionlabel": "long ton to pound",
+                "conversion": "2240"
+            },
+            {
+                "conversionlabel": "tonne to pound",
+                "conversion": "2204.6226218488"
+            },
+            {
+                "conversionlabel": "grain to pound",
+                "conversion": "0.00014285714285714"
+            },
+
+            {
+                "conversionlabel": "grain to ounce",
+                "conversion": "0.03527396194958"
+            },
+            {
+                "conversionlabel": "kilograin to ounce",
+                "conversion": "35.27396194958"
+            },
+            {
+                "conversionlabel": "pound to ounce",
+                "conversion": "16"
+            },
+            {
+                "conversionlabel": "carat to ounce",
+                "conversion": "0.0070547923899161"
+            },
+            {
+                "conversionlabel": "ton to ounce",
+                "conversion": "32000"
+            },
+            {
+                "conversionlabel": "long ton to ounce",
+                "conversion": "35840"
+            },
+            {
+                "conversionlabel": "tonne to ounce",
+                "conversion": "35273.96194958"
+            },
+            {
+                "conversionlabel": "grain to ounce",
+                "conversion": "0.0022857142857143"
+            },
+
+            {
+                "conversionlabel": "gram to carat",
+                "conversion": "5"
+            },
+            {
+                "conversionlabel": "kilogram to carat",
+                "conversion": "5000"
+            },
+            {
+                "conversionlabel": "ounce to carat",
+                "conversion": "141.747615625"
+            },
+            {
+                "conversionlabel": "ton to carat",
+                "conversion": "4535923.7"
+            },
+            {
+                "conversionlabel": "long ton to carat",
+                "conversion": "5080234.544"
+            },
+            {
+                "conversionlabel": "tonne to carat",
+                "conversion": "5000000"
+            },
+            {
+                "conversionlabel": "grain to carat",
+                "conversion": "0.32399455"
+            },
+
+            {
+                "conversionlabel": "grain to ton",
+                "conversion": "0.0000011023113109244"
+            },
+            {
+                "conversionlabel": "kilograin to ton",
+                "conversion": "0.0011023113109244"
+            },
+            {
+                "conversionlabel": "pound to ton",
+                "conversion": "0.0005"
+            },
+            {
+                "conversionlabel": "ounce to ton",
+                "conversion": "0.00003125"
+            },
+            {
+                "conversionlabel": "carat to ton",
+                "conversion": "0.00000022046226218488"
+            },
+            {
+                "conversionlabel": "long ton to ton",
+                "conversion": "1.12"
+            },
+            {
+                "conversionlabel": "tonne to ton",
+                "conversion": "1.1023113109244"
+            },
+            {
+                "conversionlabel": "grain to ton",
+                "conversion": "0.000000071428571428571"
+            },
+
+            {
+                "conversionlabel": "gram to long ton",
+                "conversion": "0.00000098420652761106"
+            },
+            {
+                "conversionlabel": "grain to long ton",
+                "conversion": "0.000000071428571428571"
+            },
+            {
+                "conversionlabel": "kilogram to long ton",
+                "conversion": "0.00098420652761106"
+            },
+            {
+                "conversionlabel": "pound to long ton",
+                "conversion": "0.00044642857142857"
+            },
+            {
+                "conversionlabel": "ounce to long ton",
+                "conversion": "0.000027901785714286"
+            },
+            {
+                "conversionlabel": "ton to long ton",
+                "conversion": "0.89285714285714"
+            },
+            {
+                "conversionlabel": "tonne to long ton",
+                "conversion": "0.984206527611061106"
+            },
+            {
+                "conversionlabel": "grain to long ton",
+                "conversion": "0.000000063775510204082"
+            },
+
+            {
+                "conversionlabel": "gram to tonne",
+                "conversion": "0.000001"
+            },
+            {
+                "conversionlabel": "kilogram to tonne",
+                "conversion": "0.001"
+            },
+            {
+                "conversionlabel": "ounce to tonne",
+                "conversion": "0.000028349523125"
+            },
+            {
+                "conversionlabel": "carat to tonne",
+                "conversion": "0.0000002"
+            },
+            {
+                "conversionlabel": "ton to tonne",
+                "conversion": "0.90718474"
+            },
+            {
+                "conversionlabel": "long ton to tonne",
+                "conversion": "1.0160469088"
+            },
+            {
+                "conversionlabel": "grain to tonne",
+                "conversion": "0.00000006479891"
+            },
+
+            {
+                "conversionlabel": "gram to grain",
+                "conversion": "15.432358352941"
+            },
+            {
+                "conversionlabel": "kilogram to grain",
+                "conversion": "15432.358352941"
+            },
+            {
+                "conversionlabel": "pound to grain",
+                "conversion": "7000"
+            },
+            {
+                "conversionlabel": "ounce to grain",
+                "conversion": "437.5"
+            },
+            {
+                "conversionlabel": "carat to grain",
+                "conversion": "3.0864716705883"
+            },
+            {
+                "conversionlabel": "ton to grain",
+                "conversion": "14000000"
+            },
+            {
+                "conversionlabel": "long ton to grain",
+                "conversion": "15680000"
+            },
+            {
+                "conversionlabel": "tonne to grain",
+                "conversion": "15432358.352941"
+            }
+        ]
+    }
+}

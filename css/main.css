@@ -1,0 +1,277 @@
+canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+
+}
+
+#text {
+    position: fixed;
+    top: 24px;
+    left: 955px;
+    border: transparent;
+    width: 263px;
+    height: 266px;
+
+
+}
+
+#data1 {
+    position: fixed;
+    top: 510px;
+    left: 30px;
+    border: transparent;
+}
+
+#listen {
+    border: dashed transparent;
+}
+
+#data2 {
+    position: fixed;
+    bottom: -20px;
+    left: 66px;
+    border: black;
+    height: 200px;
+    width: 622px;
+}
+
+#data3 {
+    position: fixed;
+    top: 321px;
+    left: 869px;
+    border: 4px transparent solid;
+    border-radius: 5px;
+    width: 500px;
+    height: 500px;
+
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    /* object-fit: fill; */
+}
+
+.elementToFadeInAndOut {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-animation: fadeinout 10s linear forwards;
+    /* animation: fadeinout 10s linear forwards; */
+}
+
+@-webkit-keyframes fadeinout {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeinout {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+#myVideo1 {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    /* object-fit: fill; */
+}
+
+#yt {
+    position: absolute;
+    border: 1px transparent solid;
+    left: 2%;
+    top: 5%;
+}
+
+#player {
+    position: fixed;
+    border: 1px transparent solid;
+    top: 100px;
+    left: 425px;
+    height: 300;
+    width: 500px;
+    height: 550px;
+}
+
+#micstart {
+    position: absolute;
+    right: 540px;
+    bottom: 267px;
+}
+
+#music {
+    position: fixed;
+    border: 1px transparent solid;
+    top: 100px;
+    left: 100px;
+    height: 300;
+    width: 500px;
+    height: 550px;
+}
+
+#movie {
+    position: fixed;
+    border: 1px transparent solid;
+    top: 50px;
+    left: 50px;
+    height: 300;
+    width: 810px;
+    height: 420px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+
+body {
+    background: transparent;
+}
+
+#tint {
+    background-color: transparent;
+    position: fixed;
+    left: 973px;
+    width: 235px;
+    height: 238px;
+    top: 25px;
+}
+
+.box-outer {
+    overflow: hidden;
+    margin: 50px auto;
+    width: 238px;
+    height: 245px;
+    position: absolute;
+    left: 971px;
+    top: -29px;
+
+}
+
+
+.main_box {
+    width: 237px;
+    height: 247px;
+    position: relative;
+    background: transparent;
+    border: 5px solid transparent;
+}
+
+.bar {
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    background: transparent;
+    transition: all 1s linear;
+    -webkit-animation-duration: 2s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.bar.delay {
+    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
+}
+
+.top {
+    top: -5px;
+    left: -5px;
+}
+
+.right {
+    top: 18px;
+    right: -28px;
+    transform: rotate(90deg);
+}
+
+.bottom {
+    bottom: -5px;
+    left: -5px;
+}
+
+.left {
+    top: 18px;
+    left: -28px;
+    transform: rotate(90deg);
+}
+
+@-webkit-keyframes h-move {
+    0% {
+        left: -5px;
+    }
+
+    100% {
+        left: 200px;
+    }
+}
+
+@keyframes h-move {
+    0% {
+        left: -5px;
+    }
+
+    100% {
+        left: 200px;
+    }
+}
+
+.top,
+.bottom {
+    -webkit-animation-name: h-move;
+    animation-name: h-move;
+}
+
+@-webkit-keyframes v-move {
+    0% {
+        top: -5px;
+    }
+
+    100% {
+        top: 228px;
+    }
+}
+
+@keyframes v-move {
+    0% {
+        top: -5px;
+    }
+
+    100% {
+        top: 228px;
+    }
+}
+
+.right,
+.left {
+    -webkit-animation-name: v-move;
+    animation-name: v-move;
+}

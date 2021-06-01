@@ -1,0 +1,66 @@
+<link rel="stylesheet" type="text/css" href="css/news_page/news.css" media="screen" />
+
+<div class="blog-card">
+    <div class="meta">
+        <div class="photo" id="bg"></div>
+        <ul class="details">
+            <li class="author" id="pub"><a href="#"></a></li>
+            <li class="date" id="date1"></li>
+
+        </ul>
+    </div>
+    <div class="description">
+        <h1 id="title"></h1>
+        <h2></h2>
+        <p id="descript"></p>
+        <p class="read-more">
+            <a href="#" id="link">Read More</a>
+        </p>
+    </div>
+</div>
+<div class="blog-card alt">
+    <div class="meta">
+        <div class="photo"></div>
+        <ul class="details">
+            <li class="author" id="pub2"><a href="#"></a></li>
+            <li class="date" id="date"></li>
+
+        </ul>
+    </div>
+    <div class="description">
+        <h1 id="title2"></h1>
+        <h2></h2>
+        <p id="descript2"></p>
+        <p class="read-more">
+            <a href="#" id="link2">Read More</a>
+        </p>
+    </div>
+</div>
+
+<script>
+    article2_url
+    var article1_url = sessionStorage.getItem("article1_url");
+    var article2_url = sessionStorage.getItem("article2_url");
+    var article1_title = sessionStorage.getItem("article1_title");
+    var article1_description = sessionStorage.getItem("article1_description");
+    var article1_source = sessionStorage.getItem("article1_source");
+    var article1_img = sessionStorage.getItem("article1_img");
+    var article2_title = sessionStorage.getItem("article2_title");
+    var article2_description = sessionStorage.getItem("article2_description");
+    var article2_source = sessionStorage.getItem("article2_source");
+    var article2_img = sessionStorage.getItem("article2_img")
+    date = new Date().getUTCDate();
+    article2_title = article2_title + " by " + article2_source
+    article1_title = article1_title + " by " + article1_source
+    document.body.children[1].children[0].style.background = "url('" + article2_img + "')";
+    document.body.children[0].children[0].style.background = "url('" + article1_img + "')";
+    document.getElementById('date1').innerHTML = date
+    document.getElementById('link').href = article1_url
+    document.getElementById('link2').href = article2_url
+
+    document.getElementById('date').innerHTML = date
+    document.getElementById('title').innerHTML = article1_title
+    document.getElementById('title2').innerHTML = article2_title
+    document.getElementById('descript').innerHTML = article1_description
+    document.getElementById('descript2').innerHTML = article2_description
+</script>

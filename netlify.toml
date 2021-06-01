@@ -1,0 +1,33 @@
+# example netlify.toml
+[build]
+  command = "# no build command"
+  functions = "functions/"
+  #publish = ""
+
+[[redirects]]
+  from = "/api/peopledata"
+  to = "http://jarvisai.gleeze.com:5000/peopledata"
+  status = 200
+
+[[redirects]]
+  from = "/api/wiki"
+  to = "http://en.wikipedia.org/w/api.php?"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/convo"
+  to = "http://jarvisai.gleeze.com:5000"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/gpt"
+  to = "http://jarvisai.gleeze.com:5000/lol"
+  status = 200
+  force = true
+  
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"

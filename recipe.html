@@ -1,0 +1,42 @@
+<link rel="stylesheet" type="text/css" href="css/recipe_page/recipe.css" media="screen" />
+<div id="bg-before"></div>
+
+<body>
+    <div class="card">
+        <div class="header" id="recipe_img" href="">
+            <div class="icon">
+                <a href="#"><i class="fa fa-heart-o"></i></a>
+            </div>
+        </div>
+        <div class="text">
+            <h1 class="food" id="recipe_label">
+            </h1>
+            <i class="fa fa-clock-o"></i>
+            <i class="fa fa-users"></i>
+            <!-- 
+        <div class="stars">
+            <li>
+                <a href="#"><i class="fa fa-star"></i></a>
+                <a href="#"><i class="fa fa-star"></i></a>
+                <a href="#"><i class="fa fa-star"></i></a>
+                <a href="#"><i class="fa fa-star"></i></a>
+                <a href="#"><i class="fa fa-star-o"></i></a>
+            </li>
+        </div> -->
+            <p class="info" id="recipe_ingrediants"></p>
+        </div>
+        <a href="" class="btn" id="recipe_link">Let's Cook!</a>
+    </div>
+</body>
+<script>
+    var recipe_url = sessionStorage.getItem("recipe_url");
+    var ingred = sessionStorage.getItem("ingred");
+    var recipe_img = sessionStorage.getItem("recipe_img");
+    var recipe_name = sessionStorage.getItem("recipe_name");
+    document.body.children[1].children[0].style.background = "url('" + recipe_img + "') no-repeat center";
+    document.getElementById("recipe_label").innerHTML = recipe_name;
+    document.getElementById("recipe_ingrediants").innerHTML = ingred;
+    var a = document.getElementById('recipe_link'); //or grab it by tagname etc
+    a.href = recipe_url
+    localStorage.clear();
+</script>

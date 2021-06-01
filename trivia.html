@@ -1,0 +1,93 @@
+<link rel="stylesheet" type="text/css" href="css/trivia_page/trivia.css" media="screen" />
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="js/plugins/trivia.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" media="screen" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<button onclick="closewindow()" style="color: rgb(204, 34, 51);
+position: absolute;
+left: 16px;
+top: 10px;
+width: 50px;
+height: 50px;
+background: url(https://jarvisai.netlify.app/back-button.png); 
+padding: 0;
+border: none;
+"></button>
+
+<div id="bg-before"></div>
+<div class="container mt-5">
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-10 col-lg-10">
+            <div class="border">
+                <div class="question bg-white p-3 border-bottom">
+                    <div class="d-flex flex-row justify-content-between align-items-center mcq">
+                        <h4>Trivia</h4><span></span>
+                    </div>
+                </div>
+                <div class="question bg-white p-3 border-bottom">
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">Q.</h3>
+                        <h5 class="mt-1 ml-2" id="question"></h5>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="brazil" value="brazil"> <span onclick="whatever()">Reveal Anwser</span>
+                        </label>
+                    </div>
+                    <div id="answer" style="color:white">A:</div>
+                </div>
+                <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white"><button onclick="whateverlol()" class="btn btn-primary border-success align-items-center btn-success" type="button">Another<i class="fa fa-angle-right ml-2"></i></button></div>
+            </div>
+        </div>
+    </div>
+</div>
+<audio id="myAudio"></audio>
+<script>
+    var answer = sessionStorage.getItem("answer");
+    var buffer = sessionStorage.getItem("buffer");
+    var question = sessionStorage.getItem("question");
+    answer = answer.replace(/<\/?[^>]+(>|$)/g, "");
+    question = question.replace(/<\/?[^>]+(>|$)/g, "");
+    if (!question.endsWith("?")) {
+        question += "?"
+    }
+    answer = "A: " + answer
+    bg = "https://jarvisai.netlify.app/trivia.jpg"
+    document.body.children[1].style.background = "url('" + bg + "')";
+
+    buffer = "https://api.voicerss.org/?key=eb162b60623b425f84fdcc147778f353&hl=en-us&src=" + buffer;
+    var audio = document.getElementById('myAudio');
+    audio.src = buffer
+    audio.load();
+    audio.play();
+    document.getElementById('answer').innerHTML = answer;
+
+    document.getElementById('question').innerHTML = question;
+
+    function whatever() {
+        var answer = sessionStorage.getItem("answer");
+        answer = answer.replace(/<\/?[^>]+(>|$)/g, "");
+        answer = "What is " + answer
+
+        document.getElementById('answer').style = "color: black";
+        buffer = "https://api.voicerss.org/?key=eb162b60623b425f84fdcc147778f353&hl=en-us&src=" + answer;
+        var audio = document.getElementById('myAudio');
+        audio.src = buffer
+        audio.load();
+        audio.play();
+
+    }
+
+    function closewindow() {
+        localStorage.clear();
+        window.open("https://waidai.netlify.app")
+    }
+
+    function whateverlol() {
+        getrandomtrivia()
+        setTimeout(function() {
+            window.close()
+        }, 2000);
+    }
+</script>

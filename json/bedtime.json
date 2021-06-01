@@ -1,0 +1,23 @@
+{
+    "stories": [{
+            "bedtimelink": "https://jarvisai.netlify.app/audiofiles/bedtime/gl.mp3",
+            "storyinfo": "Goldilocks and the Three Bears"
+        },
+        {
+            "bedtimelink": "https://jarvisai.netlify.app/audiofiles/bedtime/slg.mp3",
+            "storyinfo": "The Wolf and the Seven Little Goats"
+        },
+        {
+            "bedtimelink": "https://jarvisai.netlify.app/audiofiles/bedtime/jb.mp3",
+            "storyinfo": "The Story of Jack and the Beanstalk"
+        },
+        {
+            "bedtimelink": "https://jarvisai.netlify.app/audiofiles/bedtime/lr.mp3",
+            "storyinfo": "The Little Red Hen"
+        },
+        {
+            "bedtimelink": "https://jarvisai.netlify.app/audiofiles/bedtime/se.mp3",
+            "storyinfo": "The Shoemaker and the Elves"
+        }
+    ]
+}

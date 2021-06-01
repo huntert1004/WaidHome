@@ -1,0 +1,50 @@
+<link rel="stylesheet" type="text/css" href="css/movie_page/movie.css" media="screen" />
+<div id="bg-before"></div>
+<div class='card'>
+    <div class='card_left'>
+        <img id="imgsrc" src=''>
+    </div>
+    <div class='card_right'>
+        <h1 id="movie_title"></h1>
+        <div class='card_right__details'>
+            <ul>
+                <li id="movie_date"></li>
+                <li id="movie_length"></li>
+                <li id="movie_cat"></li>
+            </ul>
+            <div class='card_right__rating'>
+                <div class='card_right__rating__stars'>
+
+                </div>
+            </div>
+            <div class='card_right__review'>
+                <p id="movie_description"><br /> </p>
+                <a href='http://www.imdb.com/title/tt0266697/plotsummary?ref_=tt_stry_pl' target='_blank'>Read more</a>
+            </div>
+            <div class='card_right__button'>
+                <a id="movie_trailer" href='https://www.youtube.com/watch?v=ot6C1ZKyiME' target='_blank'>WATCH TRAILER</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var movie_year = sessionStorage.getItem("movie_year");
+    var movie_title = sessionStorage.getItem("movie_title");
+    var movie_release = sessionStorage.getItem("movie_release");
+    var movie_genre = sessionStorage.getItem("movie_genre");
+    var movie_director = sessionStorage.getItem("movie_director");
+    var movie_actors = sessionStorage.getItem("movie_actors");
+    var movie_plot = sessionStorage.getItem("movie_plot");
+    var movie_poster = sessionStorage.getItem("movie_poster")
+    var vidurl = sessionStorage.getItem("vidurl")
+    document.body.children[0].style.background = "url('" + movie_poster + "')";
+    document.getElementById('movie_description').innerHTML = movie_plot + "..."
+    document.getElementById('movie_date').innerHTML = movie_year
+    document.getElementById('movie_cat').innerHTML = movie_genre
+    document.getElementById('movie_length').innerHTML = "Directed by " + movie_director
+    document.getElementById('imgsrc').src = movie_poster
+    document.getElementById('movie_title').innerHTML = movie_title
+    if (vidurl != null) {
+        document.getElementById('movie_trailer').href = vidurl
+    }
+</script>
