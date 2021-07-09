@@ -1,0 +1,82 @@
+<style>
+    #example1 {
+        border: 2px solid black;
+        padding: 25px;
+        background: url(mountain.jpg);
+        background-repeat: no-repeat;
+        background-size: auto;
+        filter: blur(20px);
+        animation: blurAni 24s infinite;
+    }
+
+    /* .bg-before {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        box-shadow: inset 0 0 200px #000;
+        background-image: url("");
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: blur(20px);
+        animation: blurAni 24s infinite;
+
+    } */
+
+    @keyframes blurAni {
+        0% {
+            filter: blur(0);
+        }
+
+        25% {
+            filter: blur(5px);
+        }
+
+        50% {
+            filter: blur(10px);
+        }
+
+        75% {
+            filter: blur(5px);
+        }
+
+        100% {
+            filter: blur(0);
+        }
+    }
+
+    body {
+        text-align: center;
+        background: transparent;
+    }
+
+    .wrapper {
+        position: fixed;
+    }
+
+    .container {
+        background-color: transparent;
+
+    }
+</style>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<div id="example1">
+    <!-- <h2>Hello World</h2>
+    <p>The background image is displayed in its original size.</p> -->
+</div>
+<p id="songname" style="font-weight: bold; position: absolute;top: 2%;color: #5fb8ff; left: 2%;"></p>
+<!-- <div class="container">
+    <p>I Wanna Rock</p>
+</div> -->
+<script>
+    var albumimd = sessionStorage.getItem("albumimd");
+    var songname = sessionStorage.getItem("songname");
+    var artistname = sessionStorage.getItem("artistname");
+    // albumimd = "https://i.scdn.co/image/de4fafd9b4397e93f43fec99252c03fe5181c4fb"
+    document.getElementById("songname").innerHTML = songname + " by " + artistname
+    document.body.children[0].style.background = "url('" + albumimd + "')";
+
+    //rgba(0, 0, 0, .6)
+</script>

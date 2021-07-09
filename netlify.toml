@@ -10,8 +10,18 @@
   status = 200
 
 [[redirects]]
-  from = "/api/wiki"
-  to = "http://en.wikipedia.org/w/api.php?"
+  from = "/api/eventdata"
+  to = "http://jarvisai.gleeze.com:5000/eventdata"
+  status = 200
+
+[[redirects]]
+  from = "/api/wikidata"
+  to = "http://jarvisai.gleeze.com:5000/wikidata"
+  status = 200
+
+[[redirects]]
+  from = "/api/ddg"
+  to = "https://api.duckduckgo.com/"
   status = 200
   force = true
 

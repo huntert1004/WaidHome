@@ -5,8 +5,8 @@ function bot() {
     // let featuredTitle = document.querySelector("canvas");
     // featuredTitle.id = "logo";
     parent.document.getElementById("data3").src = "stock.html"
-    parent.document.getElementById("bg").style = "background-color: black"
-    parent.document.getElementById("logo").style = "background-image: url('images/waidbgt.png'); background-repeat: no-repeat; background-size: cover;"
+    parent.document.getElementById("bg").style = "background-color: black;height: 150%;"
+    parent.document.getElementById("logo").style = "background-image: url('images/waidbgt.png');background-repeat: no-repeat;background-size: cover;left: 17px;top: -10px;position: fixed;width: 100%;height: 100%;"
     h = parent.document.getElementById("logo").style
     screensaver()
 }
@@ -21,7 +21,7 @@ function specilbot() {
     buffer = "Allow me to introduce myself, I am Waid a personal worldwide artificial intelligent device"
     question = "Waid"
     audio.play();
-    parent.document.getElementById("logo").style = "background-image: url('images/waidbgt.png'); background-repeat: no-repeat; background-size: cover;"
+    parent.document.getElementById("logo").style = "background-image: url('images/waidbgt.png');background-repeat: no-repeat;background-size: cover;left: 17px;top: -10px;position: fixed;width: 100%;height: 100%;"
 
 
 
@@ -29,14 +29,19 @@ function specilbot() {
     div.className = "elementToFadeInAndOut"
     // div.style = "background-image: url('images/waidbgt.png'); background-repeat: no-repeat; background-size: cover;"
     div.style = "background-image: url('images/waidbgt.png'); background-repeat: no-repeat; background-size: cover;"
-    parent.document.getElementById("bg").style = "background-color: black"
+    parent.document.getElementById("bg").style = "background-color: black;height: 150%;"
     setTimeout(function() {
         bot()
         var element = parent.document.getElementById("logo");
         element.classList.remove("elementToFadeInAndOut");
-        parent.document.getElementById("logo").style = "background-image: url(''); background-repeat: no-repeat; background-size: cover;"
-        parent.document.getElementById("logo").style = "background-image: url('images/waidbgt.png'); background-repeat: no-repeat; background-size: cover;"
+        bgblur = parent.document.getElementById("musicbg").src
+        if (bgblur != "musicbackground.html") {
+            parent.document.getElementById("musicbg").src = "weatherexample.html"
+        }
+        parent.document.getElementById("logo").style = "background-image: url(''); background-repeat: no-repeat; background-size: cover;left: 17px;"
+        parent.document.getElementById("logo").style = "background-image: url('images/waidbgt.png');background-repeat: no-repeat;background-size: cover;left: 17px;top: -10px;position: fixed;width: 100%;height: 100%;"
         starttextanimation(buffer, question)
+        setsmallmusic()
 
 
     }, 7000);
@@ -44,28 +49,49 @@ function specilbot() {
 }
 
 function hunterintro(transcript) {
+    var d = new Date();
+    var n = d.getHours();
+    if (n >= 17) {
+        day = "tonight"
+    }
+    if (n > 17 && n < 12) {
+        day = "this afternoon"
+    }
+    if (n <= 12) {
+        day = "this morning"
+    }
+    if (day == "tonight") {
+        buffer = "http://api.voicerss.org/?key=eb162b60623b425f84fdcc147778f353&hl=en-au&v=Jack&src=" + "Burning the midnight oils are we Sir!";
+    } else {
+        buffer = "http://api.voicerss.org/?key=eb162b60623b425f84fdcc147778f353&hl=en-au&v=Jack&src=" + "How we doing " + day + " Sir.";
+    }
     var audio = parent.document.getElementById('myAudio');
-    buffer = "http://api.voicerss.org/?key=eb162b60623b425f84fdcc147778f353&hl=en-au&v=Jack&src=" + "How we doing today Sir.";
+
 
     audio.src = buffer
     audio.load();
 
     audio.play();
-    parent.document.getElementById("logo").style = "background-image: url('images/waidbgt.png'); background-repeat: no-repeat; background-size: cover;"
+    parent.document.getElementById("logo").style = "background-image: url('images/waidbgt.png');background-repeat: no-repeat;background-size: cover;left: 17px;top: -10px;position: fixed;width: 100%;height: 100%;"
 
 
 
     var div = parent.document.getElementById("logo");
     div.className = "elementToFadeInAndOut"
     // div.style = "background-image: url('images/waidbgt.png'); background-repeat: no-repeat; background-size: cover;"
-    div.style = "background-image: url('images/waidbgt.png'); background-repeat: no-repeat; background-size: cover;"
-    parent.document.getElementById("bg").style = "background-color: black"
+    div.style = "background-image: url('images/waidbgt.png'); background-repeat: no-repeat; background-size: cover;left: 17px; position: relative;"
+    parent.document.getElementById("bg").style = "background-color: black;height: 150%;"
     setTimeout(function() {
         bot()
         var element = parent.document.getElementById("logo");
         element.classList.remove("elementToFadeInAndOut");
-        parent.document.getElementById("logo").style = "background-image: url(''); background-repeat: no-repeat; background-size: cover;"
-        parent.document.getElementById("logo").style = "background-image: url('images/waidbgt.png'); background-repeat: no-repeat; background-size: cover;"
+        bgblur = parent.document.getElementById("musicbg").src
+        if (bgblur != "musicbackground.html") {
+            parent.document.getElementById("musicbg").src = "weatherexample.html"
+        }
+        parent.document.getElementById("logo").style = "background-image: url(''); background-repeat: no-repeat; background-size: cover;left: 17px;"
+        parent.document.getElementById("logo").style = "background-image: url('images/waidbgt.png');background-repeat: no-repeat;background-size: cover;left: 17px;top: -10px;position: fixed;width: 100%;height: 100%;"
+        setsmallmusic()
         callData(question = transcript)
 
 
@@ -114,6 +140,7 @@ recognition.onresult = function(event) {
     var transcript = event.results[current][0].transcript;
     if (transcript.indexOf("Waid") >= 0 || transcript.indexOf("wade") >= 0 || transcript.indexOf("Wade") >= 0 || transcript.indexOf("waid") >= 0 || transcript.indexOf("wait") >= 0 || transcript.indexOf("Wait") >= 0) {
         console.log(transcript)
+
         if (parent.document.getElementById("logo").style.length == 0) {
             vidcounter = 1
             vid = parent.document.getElementById("myVideo")
@@ -135,9 +162,12 @@ recognition.onresult = function(event) {
             }, 5000);
 
         } else {
-
-
+            bgblur = parent.document.getElementById("musicbg").src
+            if (bgblur != "musicbackground.html") {
+                parent.document.getElementById("musicbg").src = "weatherexample.html"
+            }
             bot()
+            setsmallmusic()
             callData(question = transcript)
         }
 
@@ -162,7 +192,7 @@ recognition.onstart = function() {
 
 recognition.onspeechend = function() {
     console.log('You were quiet for a while so voice recognition turned itself off.');
-    num = Math.floor(Math.random() * 11);
+    num = Math.floor(Math.random() * 21);
     if (num == 5) {
         window.location.reload();
     }
@@ -205,6 +235,7 @@ function reload() {
 
 
 
+
         setTimeout(function() {
 
             reload()
@@ -220,47 +251,59 @@ function reload() {
 function screensaver() {
     if (vidtimeout == undefined) {
         timeout1 = setTimeout(function() {
-            vidcounter = 0
-            parent.document.getElementById("logo").style = "background-image: url(''); background-repeat: no-repeat; background-size: cover;"
-            parent.document.getElementById("movie").src = "https://naughty-hermann-189d94.netlify.app/";
-            parent.document.getElementById("music").src = "https://naughty-hermann-189d94.netlify.app/";
-            parent.document.getElementById("player").src = "https://naughty-hermann-189d94.netlify.app/";
-            parent.document.getElementById("data1").src = "https://naughty-hermann-189d94.netlify.app/";
-            parent.document.getElementById("data2").src = "https://naughty-hermann-189d94.netlify.app/";
-            parent.document.getElementById("data3").src = "https://naughty-hermann-189d94.netlify.app/";
-            parent.document.getElementById("yt").src = "https://naughty-hermann-189d94.netlify.app/";
-            parent.document.getElementById("text").src = "https://naughty-hermann-189d94.netlify.app/";
-            parent.document.getElementById("bg").style = "background-color: transparent"
-            var obj = parent.document.getElementsByClassName("bar");
-            obj[0].style.background = "transparent";
-            obj[1].style.background = "transparent";
-            obj[2].style.background = "transparent";
-            obj[3].style.background = "transparent";
+            if (parent.document.getElementById("musicbg") != "musicbackground.html") {
+                vidcounter = 0
+                parent.document.getElementById("logo").style = "background-image: url(''); background-repeat: no-repeat; background-size: cover;left: 17px;"
+                parent.document.getElementById("movie").src = "https://naughty-hermann-189d94.netlify.app/";
+                parent.document.getElementById("music").src = "https://naughty-hermann-189d94.netlify.app/";
+                parent.document.getElementById("player").src = "https://naughty-hermann-189d94.netlify.app/";
+                parent.document.getElementById("data1").src = "https://naughty-hermann-189d94.netlify.app/";
+                parent.document.getElementById("data2").src = "https://naughty-hermann-189d94.netlify.app/";
+                parent.document.getElementById("data3").src = "https://naughty-hermann-189d94.netlify.app/";
+                parent.document.getElementById("yt").src = "https://naughty-hermann-189d94.netlify.app/";
+                parent.document.getElementById("text").src = "https://naughty-hermann-189d94.netlify.app/";
+                parent.document.getElementById("musicbg").src = "https://naughty-hermann-189d94.netlify.app/";
+                parent.document.getElementById("bg").style = "background-color: transparent"
+                var obj = parent.document.getElementsByClassName("bar");
+                obj[0].style.background = "transparent";
+                obj[1].style.background = "transparent";
+                obj[2].style.background = "transparent";
+                obj[3].style.background = "transparent";
 
+                init()
+            } else {
+                screensaver()
+            }
 
         }, 3600000);
         vidtimeout = timeout1
     } else {
         clearTimeout(vidtimeout)
         timeout2 = setTimeout(function() {
-            parent.document.getElementById("logo").style = "background-image: url(''); background-repeat: no-repeat; background-size: cover;"
-            parent.document.getElementById("movie").src = "https://naughty-hermann-189d94.netlify.app/";
-            parent.document.getElementById("music").src = "https://naughty-hermann-189d94.netlify.app/";
-            parent.document.getElementById("player").src = "https://naughty-hermann-189d94.netlify.app/";
-            parent.document.getElementById("data1").src = "https://naughty-hermann-189d94.netlify.app/";
-            parent.document.getElementById("data2").src = "https://naughty-hermann-189d94.netlify.app/";
-            parent.document.getElementById("data3").src = "https://naughty-hermann-189d94.netlify.app/";
-            parent.document.getElementById("yt").src = "https://naughty-hermann-189d94.netlify.app/";
-            parent.document.getElementById("text").src = "https://naughty-hermann-189d94.netlify.app/";
-            // parent.document.getElementById("myVideo1").src = "https://naughty-hermann-189d94.netlify.app/";
-            parent.document.getElementById("bg").style = "background-color: transparent background: transparent"
-            var obj = parent.document.getElementsByClassName("bar");
-            obj[0].style.background = "transparent";
-            obj[1].style.background = "transparent";
-            obj[2].style.background = "transparent";
-            obj[3].style.background = "transparent";
-            vidcounter = 0
-            reload()
+            if (parent.document.getElementById("musicbg") != "musicbackground.html") {
+                parent.document.getElementById("logo").style = "background-image: url(''); background-repeat: no-repeat; background-size: cover;left: 17px;"
+                parent.document.getElementById("movie").src = "https://naughty-hermann-189d94.netlify.app/";
+                parent.document.getElementById("music").src = "https://naughty-hermann-189d94.netlify.app/";
+                parent.document.getElementById("player").src = "https://naughty-hermann-189d94.netlify.app/";
+                parent.document.getElementById("data1").src = "https://naughty-hermann-189d94.netlify.app/";
+                parent.document.getElementById("data2").src = "https://naughty-hermann-189d94.netlify.app/";
+                parent.document.getElementById("data3").src = "https://naughty-hermann-189d94.netlify.app/";
+                parent.document.getElementById("yt").src = "https://naughty-hermann-189d94.netlify.app/";
+                parent.document.getElementById("text").src = "https://naughty-hermann-189d94.netlify.app/";
+                parent.document.getElementById("musicbg").src = "https://naughty-hermann-189d94.netlify.app/";
+                // parent.document.getElementById("myVideo1").src = "https://naughty-hermann-189d94.netlify.app/";
+                parent.document.getElementById("bg").style = "background-color: transparent background: transparent"
+                var obj = parent.document.getElementsByClassName("bar");
+                obj[0].style.background = "transparent";
+                obj[1].style.background = "transparent";
+                obj[2].style.background = "transparent";
+                obj[3].style.background = "transparent";
+                vidcounter = 0
+                init()
+                reload()
+            } else {
+                screensaver()
+            }
         }, 3600000);
         vidtimeout = timeout2
     }

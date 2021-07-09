@@ -22,6 +22,7 @@ function callData(question) {
 
         counter++
     }
+
     if (question == "Jarvis" || question == "jarvis") {
         buffer = "Hello! What can I help you with today?"
         // sessionStorage.setItem("buffer", buffer);
@@ -58,9 +59,21 @@ function callData(question) {
     if (question.startsWith("Wade")) {
         question = question.replace("Wade ", "");
     }
+    if (question.startsWith(" Wade")) {
+        question = question.replace(" Wade ", "");
+    }
     if (question.startsWith("wade")) {
         question = question.replace("wade ", "");
     }
+    if (question.startsWith(" wade")) {
+        question = question.replace(" wade ", "");
+    }
+    // if (question.indexOf("recalibrate") >= 0 || question.indexOf("restart") >= 0) {
+    //     window.self.close()
+    //     hi = window.open("index.html")
+    //     hi.reload()
+    // }
+
     if (question.indexOf("wake") >= 0 || question.indexOf("up") >= 0) {
         novoForm = window.open("SphereDisplay/index.html")
         buffer = "How we doing today sir."
@@ -68,11 +81,75 @@ function callData(question) {
         speak(buffer)
         counter++
     }
+    if (question.indexOf("skip") >= 0 || question.indexOf("next") >= 0) {
+        hi = parent.document.getElementById("musicbg").src
+        if (hi.endsWith("musicbackground.html")) {
+            getspotifyaccess(question = "next")
+            setTimeout(function() {
+
+                access_token = sessionStorage.getItem("access_token", access_token);
+                // fetch('https://api.spotify.com/v1/me/player/shuffle?state=true', {
+                //         method: "put",
+                //         headers: {
+                //             "Content-Type": "application/json",
+                //             "Accept": "application/json",
+                //             'Authorization': 'Bearer ' + access_token
+                //         }
+                //     })
+                //     .then(response => response.json())
+                //     .then(json => console.log(json))
+                fetch('https://api.spotify.com/v1/me/player/next', {
+                        method: "post",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "Accept": "application/json",
+                            'Authorization': 'Bearer ' + access_token
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(json => console.log(json))
+                intervalcontrol(access_token)
+                setTimeout(function() {
+                    setmusicimg(access_token)
+                }, 2000);
+            }, 2000);
+        } else {
+            setsmallmusic()
+            setTimeout(function() {
+                access_token = sessionStorage.getItem("access_token", access_token);
+                fetch('https://api.spotify.com/v1/me/player/next', {
+                        method: "post",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "Accept": "application/json",
+                            'Authorization': 'Bearer ' + access_token
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(json => console.log(json))
+            }, 2000);
+        }
+        counter++
+    }
     if (question.indexOf("pause") >= 0) {
         var childiFrame = parent.document.getElementById("music");
         var doc = childiFrame.contentDocument ||
             childiFrame.contentWindow.document;
         var myAudio = doc.getElementById('myAudio');
+        getspotifyaccess(question = "next")
+        setTimeout(function() {
+            access_token = sessionStorage.getItem("access_token", access_token);
+            fetch('https://api.spotify.com/v1/me/player/pause', {
+                    method: "put",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Accept": "application/json",
+                        'Authorization': 'Bearer ' + access_token
+                    }
+                })
+                .then(response => response.json())
+                .then(json => console.log(json))
+        }, 2000);
         if (myAudio != null) {
             if (myAudio.duration > 0 && !myAudio.paused) {
 
@@ -127,12 +204,29 @@ function callData(question) {
         parent.document.getElementById("data2").src = "https://naughty-hermann-189d94.netlify.app/";
         parent.document.getElementById("data3").src = "https://naughty-hermann-189d94.netlify.app/";
         parent.document.getElementById("yt").src = "https://naughty-hermann-189d94.netlify.app/";
+        parent.document.getElementById("musicbg").src = "https://naughty-hermann-189d94.netlify.app/";
+        clearInterval(sessionStorage.intervalmusic)
     }
     if (question == "play") {
         var childiFrame = parent.document.getElementById("music");
         var doc = childiFrame.contentDocument ||
             childiFrame.contentWindow.document;
         var myAudio = doc.getElementById('myAudio');
+        getspotifyaccess(question = "next")
+        setTimeout(function() {
+            access_token = sessionStorage.getItem("access_token", access_token);
+            fetch('https://api.spotify.com/v1/me/player/play', {
+                    method: "put",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Accept": "application/json",
+                        'Authorization': 'Bearer ' + access_token
+                    }
+                })
+                .then(response => response.json())
+                .then(json => console.log(json))
+
+        }, 2000);
         if (myAudio != null) {
             if (myAudio.duration > 0 && !myAudio.paused) {
 
@@ -150,6 +244,8 @@ function callData(question) {
                 counter++
             }
         }
+
+
         if (parent.document.getElementById("yt").src != "") {
 
             var ysrc = parent.document.getElementById("yt").src;
@@ -165,6 +261,56 @@ function callData(question) {
 
 
         counter++
+    }
+    if (question.indexOf("shuffle") >= 0) {
+        hi = parent.document.getElementById("musicbg").src
+        if (hi.endsWith("musicbackground.html")) {
+            getspotifyaccess(question = "next")
+            setTimeout(function() {
+
+                access_token = sessionStorage.getItem("access_token", access_token);
+                // fetch('https://api.spotify.com/v1/me/player/shuffle?state=true', {
+                //         method: "put",
+                //         headers: {
+                //             "Content-Type": "application/json",
+                //             "Accept": "application/json",
+                //             'Authorization': 'Bearer ' + access_token
+                //         }
+                //     })
+                //     .then(response => response.json())
+                //     .then(json => console.log(json))
+                fetch('https://api.spotify.com/v1/me/player/next', {
+                        method: "post",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "Accept": "application/json",
+                            'Authorization': 'Bearer ' + access_token
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(json => console.log(json))
+                intervalcontrol(access_token)
+                setTimeout(function() {
+                    setmusicimg(access_token)
+                }, 2000);
+            }, 2000);
+        } else {
+            setsmallmusic()
+            setTimeout(function() {
+                access_token = sessionStorage.getItem("access_token", access_token);
+                fetch('https://api.spotify.com/v1/me/player/next', {
+                        method: "post",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "Accept": "application/json",
+                            'Authorization': 'Bearer ' + access_token
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(json => console.log(json))
+            }, 2000);
+        }
+
     }
     if (question == "close" || question == "stop") {
         if (parent.document.getElementById("yt").src != "") {
@@ -580,10 +726,10 @@ function callData(question) {
 
         counter++
     }
-    // if (question.indexOf("when") >= 0 && question.indexOf("was") >= 0) {
-    //     counter++
-    //     getpeopleinfo(question)
-    // }
+    if (question.indexOf("when") >= 0 && question.indexOf("was") >= 0) {
+        counter++
+        gethiseventinfo(question)
+    }
 
     //start of food info
     if (question.indexOf("recipe") >= 0 && question.indexOf("show") >= 0 || question.indexOf("get") >= 0 && question.indexOf("recipe") >= 0) {
@@ -620,15 +766,13 @@ function callData(question) {
         counter++
 
     }
-    if (question.indexOf("play") >= 0 && question.indexOf("by") >= 0) {
+    if (question.indexOf("play") >= 0 && question.indexOf(" by ") >= 0) {
         counter++
 
         playsample(question);
     }
     if (question.indexOf("play") >= 0 || question.indexOf("Play") >= 0) {
-        if (counter == 0) {
-            playsampletrack(question);
-        }
+        getspotifyaccess(question);
         counter++
 
     }
@@ -661,7 +805,7 @@ function callData(question) {
     //     errors = jsonData.response.errors;
     if (question != "") {
         if (counter == 0) {
-            getdefault(question);
+            getConvo(question);
         }
 
     }

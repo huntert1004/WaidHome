@@ -31,31 +31,48 @@ async function init() {
         classPrediction = result.scores[1]
         console.log(classPrediction)
         classPrediction = Number(classPrediction)
-
+        lol = ["https://jarvisai.netlify.app/poh.mp3", "https://jarvisai.netlify.app/paintitblack.mp3", "https://jarvisai.netlify.app/shookmeallnight.mp3", "https://jarvisai.netlify.app/allmine.mp3", "https://jarvisai.netlify.app/bigpapa.mp3", "https://jarvisai.netlify.app/girls.mp3", "https://jarvisai.netlify.app/novemberrain.mp3", "https://jarvisai.netlify.app/stilldre.mp3", "https://jarvisai.netlify.app/backinblack.mp3"];
 
 
         if (parent.document.getElementById("logo").style.length == 0 && classPrediction > .92 && classPrediction <= 1) {
-            vid = parent.document.getElementById("myVideo")
-            vidcounter = 1
-            isSupp = vid.canPlayType("video/mp4");
-            vid.src = "https://jarvisai.netlify.app/coolintro.mp4"
-            vid.load()
-            vid.play()
-            question = ""
-            buffer = "Waid Activated"
-
-            setTimeout(function() {
+            if (parent.document.getElementById("bedtime").src == "") {
+                random = Math.floor(Math.random() * 9);
+                audio = parent.document.getElementById("bedtime")
+                // myVideo.loop = true;
+                audio.src = lol[random]
+                audio.load()
+                audio.play()
                 vid = parent.document.getElementById("myVideo")
-
+                vidcounter = 1
                 isSupp = vid.canPlayType("video/mp4");
-                vid.src = ""
-                specilbot()
+                vid.src = "https://jarvisai.netlify.app/coolintro.mp4"
+                vid.load()
+                vid.play()
+                question = ""
+                buffer = "Waid Activated"
 
-            }, 5000);
-            // setTimeout(function() {
-            //     // starttextanimation(buffer, question)
-            //     // speak(buffer);
-            // }, 3000);
+
+
+                setTimeout(function() {
+                    vid = parent.document.getElementById("myVideo")
+
+                    isSupp = vid.canPlayType("video/mp4");
+                    vid.src = ""
+                    specilbot()
+
+                }, 5000);
+                setTimeout(function() {
+                    recognizer.stopListening()
+                    init()
+
+                }, 60000);
+
+                // setTimeout(function() {
+                //     // starttextanimation(buffer, question)
+                //     // speak(buffer);
+                // }, 3000);
+            }
+
 
         }
 

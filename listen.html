@@ -22,10 +22,10 @@
         localStorage.tabCount = +localStorage.tabCount + 1;
     }
 
-    window.onunload = function() {
-        localStorage.tabCount = +localStorage.tabCount - 1;
-        localStorage.i = 0;
-    };
+    // window.onunload = function() {
+    //     localStorage.tabCount = +localStorage.tabCount - 1;
+    //     localStorage.i = 0;
+    // };
     localStorage.i = 0;
 </script>
 <script src="js/clapmodel.js"></script>
@@ -42,17 +42,20 @@
     // }
     // reloadwin2()
 </script>
+<script>
+
+</script>
 
 <script>
     vidtimeout = localStorage.timeout
-
+    sessionStorage.intervalmusic = ""
     // if (novoForm.opener.closed)
     //     console.log("You killed my boss!")
     // else
     //     console.log("My boss is still alive!")
 </script>
-
-
+<script src="js/plugins/spotify.js"></script>
+<script src="js/plugins/historicalevents.js"></script>
 <script src="js/plugins/revealanwser.js"></script>
 <script src="js/script.js"></script>
 <script src="js/plugins/textanimate.js"></script>

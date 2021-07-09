@@ -17,6 +17,10 @@ canvas {
 
 }
 
+.wrapper {
+    position: fixed;
+}
+
 #data1 {
     position: fixed;
     top: 510px;
@@ -55,6 +59,14 @@ canvas {
     min-width: 100%;
     min-height: 100%;
     /* object-fit: fill; */
+}
+
+#minimusic {
+    position: fixed;
+    top: 84%;
+    height: 19%;
+    width: 49%;
+    border: dashed transparent;
 }
 
 .elementToFadeInAndOut {

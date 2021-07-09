@@ -1,73 +1,135 @@
-import requests
+
+
+
+
+#   from bs4 import BeautifulSoup
+# import urllib.request
+import pyperclip
+search = ""
+import urllib.request
 from bs4 import BeautifulSoup
-def heelo(data,page_title):
-        fullname = data.split("Place of Birth")[1]
-        fullname = fullname.split("Zodiac Sign")[0]
-        birthdata = data.split('Birth Date')[1]
-        birthdata = birthdata.split("Place of Birth")[0]
 
-        # info = data.split("Who Is "+name+"?")[1]
-        # info = info.split("Early Life")[0]
+textToSearch = 'python tutorials'
+url = "https://www.youtube.com/results?search_query=nevermind+album&sp=EgIQAw%253D%253D"
+response = urllib.request.urlopen(url)
+html = response.read()
+soup = BeautifulSoup(html, 'html.parser')
+soup = str(soup)
+pyperclip.copy(soup)
+print(soup)
+for vid in soup.findAll(attrs={'class':'yt-uix-tile-link'}):
+    if not vid['href'].startswith("https://googleads.g.doubleclick.net/"):
+        print('https://www.youtube.com' + vid['href'])
 
-        zodiac = data.split("Zodiac Sign")[1]
-        zodiac = zodiac.split("Who Is")[0]
-        print("it worked")
+    # for i in divs:
+    #     href= i.find('a', href=True)
+    #     print(href.text,  "\nhttps://www.youtube.com"+href['href'], '\n')
+    #     with open(SearchString.replace("%20", "_")+'.txt', 'a') as writer:
+    #         writer.write("https://www.youtube.com"+href['href']+'\n')
+
+    # print("What are you looking for?")
+    # SearchString = input()
+    # SearchVid(SearchString.replace(" ", "%20"))
+    # print(search)
+# def run():
+#     res = requests.get('https://www.youtube.com/results?search_query=nevermind+album&sp=EgIQAw%253D%253D')
+#     hi  =res.text
+#     soup = BeautifulSoup(res.content, 'html.parser')
     
-def run():
-    res = requests.get('https://www.biography.com/search?query=bradley+cooper')
-    hi  =res.text
-    hi = hi.split("/bradley-cooper")[0]
-    hi = hi.split("main.js-->")[1]
-    hi = hi.split('f="')[1]
-    hi += "/bradley-cooper"
-
-    print(hi)
-    res = requests.get('https://www.biography.com'+hi)
-    soup = BeautifulSoup(res.content, 'html.parser')
-
-    # Extract title of page
-    page_title = soup.title.text
-    data = soup.body.text
-    if data.find("Education") >= 0:
-        if data.find("Place of Birth")>=0:
-            if data.find("Did You Know?")>=0:
-                if data.find("Who Is")>=0:
-                    birth = data.split("Place of Birth")[1]
-                    birth = birth.split("Full Name")[0]
-                    fullname = data.split("Place of Birth")[1]
-                    fullname = fullname.split("Zodiac Sign")[0]
-                    
-                    education = data.split("Education")[1]
-                    education = education.split("PLACE OF BIRTH")[0]
-                    
-                    funfact = data.split("Did You Know?")[1]
-                    funfact = funfact.split("EDUCATION")[0]   
-                    
-                    
-                    
-                    zodiac = data.split("Zodiac Sign")[1]
-                    zodiac = zodiac.split("Who Is")[0]
-                    # name = page_title.split(" - Stats")[0]
-                    info = data.split("Who Is "+name+"?")[1]
-                    info = info.split("Early Life")
-                    birthdata = data.split('Birth Date')[1]
-                    birthdata = birthdata.split("Place of Birth")[0]
-                else:
-                    heelo(data,page_title)  
+#     find_all_a = soup.find_all(href=True)
+#     find_all_a = str(find_all_a)
+#     hi = find_all_a.split("/event")
+#     print(hi)
+    # if (len(hi)>1):
+    #     hi[2]
+    # else
+    #     return 
+    # if hi.find('"}}')>=0:
+    #     hi = hi.split('"}}')[0]
+        
+    # else:
+    #     hi = hi.split("#ref")[0]
+    # # print(hi)
+    # # Extract title of page
+    # url = "/event" +hi
+    # name = url.replace("/event/","")
+    # name = name.split("-")
     
-            else:
-                heelo(data,page_title)
+    # namereal =""
+    # lengthlol = len(name) - 1
+    # counter = 0
     
-        else:
-            heelo(data,page_title)
-           
-    else:
-        heelo(data,page_title)
-
+    # for x in name:
+    #     if lengthlol > counter:
+    #         namereal += x+" "
+    #     else:
+    #         namereal += x
+    #     counter+=1
     
 
     
-run()
+
+    # # print(namereal)
+    # res = requests.get('https://www.britannica.com/'+url)
+    # soup = BeautifulSoup(res.content, 'html.parser')
+    # # Extract title of page
+    # page_title = soup.title.text
+    # data = soup.body.text
+    # #Date
+    # lollol = eventdate = data.split("date")
+    
+    # if data.find(" date")>=0:
+    #     eventdate = data.split(" date")[1]
+    # else:
+        
+    #     if len(lollol) ==4:
+    #         eventdate = data.split("date")[3]
+    #     if len(lollol) ==3:
+    #         eventdate = data.split("date")[2]
+    #     if len(lollol) ==2:
+    #         eventdate = data.split("date")[1]
+    #     if len(lollol) ==1:
+    #         eventdate = data.split("date")[0]
+    
+        
+    # if data.find("timeline")>=0:
+    #     eventdate = eventdate.split("timeline")[0]
+    # if data.find("location")>=0:
+    #     eventdate = eventdate.split("location")[0]
+    # if data.find("participants")>=0:
+    #     eventdate = eventdate.split("participants")[0]
+    # if len(eventdate)>50:
+    #     eventdate="Lol not good data"
+    
+    # #end
+    # #info
+    # if data.find(namereal+",")>=0:
+    #     info = data.split(namereal+",")[1]
+    #     info = info.split("Top Questions")[0]
+    #     info = namereal+info
+    # if data.find("see "+namereal+" summary.")>=0:
+    #     info = data.split("see "+namereal+" summary.")[1]
+    #     info = info.split("Top Questions")[0]
+    #     info = namereal+info
+    # if info.find(namereal+" summary.")>=0:
+    #     info = data.split("see "+namereal+" summary.")[1]
+    #     info = info.split("Top Questions")[0]
+    #     info = namereal+info
+    # if info.find("WRITTEN BY")>=0:
+    #     info = data.split("see "+namereal+" summary.")[1]
+    #     info = info.split("Top Questions")[0]
+    #     info = namereal+info
+    
+   
+
+    
+
+    
+    # print(data)
+
+    
+
+
 
 			
 			

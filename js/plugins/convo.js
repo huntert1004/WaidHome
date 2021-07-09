@@ -14,7 +14,7 @@ function getConvo(question) {
         buffer = jsonData.result;
 
         //buffer = buffer + answer;
-        starttextanimation(buffer, question)
+
         speak(buffer)
 
     });

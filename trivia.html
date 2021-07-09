@@ -5,7 +5,11 @@
 <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" media="screen" />
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<button onclick="closewindow()" style="color: rgb(204, 34, 51);
+
+<body style="
+background-color: transparent;
+">
+    <!-- <button onclick="closewindow()" style="color: rgb(204, 34, 51);
 position: absolute;
 left: 16px;
 top: 10px;
@@ -14,35 +18,56 @@ height: 50px;
 background: url(https://jarvisai.netlify.app/back-button.png); 
 padding: 0;
 border: none;
-"></button>
+"></button> -->
 
-<div id="bg-before"></div>
-<div class="container mt-5">
-    <div class="d-flex justify-content-center row">
-        <div class="col-md-10 col-lg-10">
-            <div class="border">
-                <div class="question bg-white p-3 border-bottom">
-                    <div class="d-flex flex-row justify-content-between align-items-center mcq">
-                        <h4>Trivia</h4><span></span>
+    <!-- <div id="bg-before"></div> -->
+    <div class="container mt-5" style="
+    background-color: transparent!important;">
+        <div class="d-flex justify-content-center row" style="
+        background-color: transparent!important;">
+            <div class="col-md-10 col-lg-10" style="
+            background-color: transparent!important;
+            border: 1px solid transparent!important;
+        ">
+                <div class="border" style="
+                background-color: transparent!important;
+                border: 1px solid transparent!important;
+            ">
+                    <div class="question bg-white p-3 border-bottom" style="
+                    background-color: transparent!important;
+                    border: 1px solid transparent!important;
+                ">
+                        <div class="d-flex flex-row justify-content-between align-items-center mcq" style="
+                        background-color: transparent!important;">
+                            <h4 style="color: whitesmoke;"></h4><span></span>
+                        </div>
                     </div>
+                    <div class="question bg-white p-3 border-bottom" style="
+                    background-color: transparent!important;
+                    border: 1px solid transparent!important;
+                ">
+                        <div class="d-flex flex-row align-items-center question-title" style="
+                        background-color: transparent!important;">
+                            <h3 class="text-danger" style="color: #5fb8ff!important;">Q.</h3>
+                            <h5 style="color: whitesmoke;" class=" mt-1 ml-2" id="question"></h5>
+                        </div>
+                        <div class="ans ml-2" style="color: #5fb8ff!important;">
+                            <label class="radio" style="color: #5fb8ff!important;"> <input type="radio" name="brazil" value="brazil" style="color: #5fb8ff!important;"> <span onclick="whatever()" style="color: #5fb8ff!important;border: 1px solid #5fb8ff!important;">Reveal Anwser</span>
+                            </label>
+                        </div>
+                        <div id="answer" style="color:transparent">A:</div>
+                    </div>
+                    <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white" style="
+                    background-color: transparent!important;
+                    border: 1px solid transparent!important;
+                    color: #5fb8ff!important;
+                "><button onclick="whateverlol()" class="btn btn-primary border-success align-items-center btn-success" style="color: white!important;border-color: #5fb8ff!important;background-color: #5fb8ff!important;" type="button">Another<i class="fa fa-angle-right ml-2"></i></button></div>
                 </div>
-                <div class="question bg-white p-3 border-bottom">
-                    <div class="d-flex flex-row align-items-center question-title">
-                        <h3 class="text-danger">Q.</h3>
-                        <h5 class="mt-1 ml-2" id="question"></h5>
-                    </div>
-                    <div class="ans ml-2">
-                        <label class="radio"> <input type="radio" name="brazil" value="brazil"> <span onclick="whatever()">Reveal Anwser</span>
-                        </label>
-                    </div>
-                    <div id="answer" style="color:white">A:</div>
-                </div>
-                <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white"><button onclick="whateverlol()" class="btn btn-primary border-success align-items-center btn-success" type="button">Another<i class="fa fa-angle-right ml-2"></i></button></div>
             </div>
         </div>
     </div>
-</div>
-<audio id="myAudio"></audio>
+    <audio id="myAudio"></audio>
+</body>
 <script>
     var answer = sessionStorage.getItem("answer");
     var buffer = sessionStorage.getItem("buffer");
@@ -54,7 +79,7 @@ border: none;
     }
     answer = "A: " + answer
     bg = "https://jarvisai.netlify.app/trivia.jpg"
-    document.body.children[1].style.background = "url('" + bg + "')";
+    // document.body.children[1].style.background = "url('" + bg + "')";
 
     buffer = "https://api.voicerss.org/?key=eb162b60623b425f84fdcc147778f353&hl=en-us&src=" + buffer;
     var audio = document.getElementById('myAudio');
@@ -70,7 +95,7 @@ border: none;
         answer = answer.replace(/<\/?[^>]+(>|$)/g, "");
         answer = "What is " + answer
 
-        document.getElementById('answer').style = "color: black";
+        document.getElementById('answer').style = "color: #5fb8ff!important;";
         buffer = "https://api.voicerss.org/?key=eb162b60623b425f84fdcc147778f353&hl=en-us&src=" + answer;
         var audio = document.getElementById('myAudio');
         audio.src = buffer
